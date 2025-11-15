@@ -46,8 +46,8 @@ export default function Navbar() {
             onClick={() => handleNavClick("#top")}
             className="flex items-center gap-2"
           >
-            <div className="flex h-8 w-8 items-center justify-center rounded-2xl bg-tbx-amber/80 text-xs font-bold text-slate-800 shadow">
-              TB
+            <div className="flex h-9 w-9 p-1 items-center justify-center rounded-2xl bg-white text-xs font-bold text-slate-800 shadow">
+              <img src="/assets/logo_navbar.png" alt="" />
             </div>
             <div className="flex flex-col items-start">
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">

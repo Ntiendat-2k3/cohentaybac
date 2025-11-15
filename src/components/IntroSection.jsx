@@ -3,6 +3,8 @@ import SectionTitle from "./layout/SectionTitle";
 
 export default function IntroSection() {
   return (
+    <>
+    <div className="mt-8"></div>
     <section className="section-shell" id="gioi-thieu">
       <SectionTitle
         eyebrow="Giới thiệu"
@@ -23,5 +25,7 @@ export default function IntroSection() {
         </p>
       </div>
     </section>
+    </>
+
   );
 }
