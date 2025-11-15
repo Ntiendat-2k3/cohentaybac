@@ -10,17 +10,14 @@ const reasons = [
 
 export default function WhyJoinSection() {
   return (
-    <section className="mb-12">
+    <section className="section-shell">
       <SectionTitle
         eyebrow="Vì sao nên tham gia?"
         title="Một ngày trọn vẹn hương núi gió ngàn"
       />
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="section-grid-3">
         {reasons.map((item) => (
-          <article
-            key={item}
-            className="rounded-3xl border border-white/40 bg-white/40 p-5 text-sm text-slate-700 shadow-lg backdrop-blur-xl"
-          >
+          <article key={item} className="glass-card text-sm text-slate-700">
             <div className="mb-2 h-1 w-10 rounded-full bg-emerald-300/80" />
             <p>{item}</p>
           </article>

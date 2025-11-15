@@ -1,11 +1,14 @@
+import "./index.css";
 import LandingPage from "./pages/LandingPage";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
-    <div className="min-h-screen">
-      <div className="min-h-screen bg-white/20 backdrop-blur-xl">
+    <div id="top" className="page-shell">
+      <Navbar />
+      <main className="pt-20 md:pt-24">
         <LandingPage />
-      </div>
+      </main>
     </div>
   );
 }

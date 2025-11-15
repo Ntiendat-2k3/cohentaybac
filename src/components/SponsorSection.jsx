@@ -2,30 +2,23 @@ import SectionTitle from "./layout/SectionTitle";
 
 export default function SponsorSection() {
   return (
-    <footer className="mb-10 border-t border-white/50 pt-8">
+    <footer className="mt-4 border-t border-white/50 pb-10 pt-8">
       <SectionTitle
         eyebrow="Đơn vị tổ chức"
         title="Thông tin đối tác & nhà tài trợ"
       />
-      <div className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-3xl border border-white/40 bg-white/40 p-5 text-sm text-slate-700 shadow-lg backdrop-blur-xl">
+      <div className="section-grid-2">
+        <div className="glass-card text-sm text-slate-700">
           <p>
-            Thông tin về CLB / Đơn vị tổ chức, đồng hành cùng chương
-            trình sẽ được đặt tại đây. Bạn có thể thêm logo, mô tả ngắn
-            gọn và link fanpage nếu cần.
+            Thông tin về CLB / Đơn vị tổ chức và các nhà tài trợ đồng
+            hành.
           </p>
         </div>
-        <div className="rounded-3xl border border-white/40 bg-white/40 p-5 shadow-lg backdrop-blur-xl">
+        <div className="glass-card">
           <div className="flex flex-wrap gap-3 text-xs text-slate-600">
-            <div className="rounded-full bg-white/70 px-3 py-1 shadow-sm">
-              Logo 1
-            </div>
-            <div className="rounded-full bg-white/70 px-3 py-1 shadow-sm">
-              Logo 2
-            </div>
-            <div className="rounded-full bg-white/70 px-3 py-1 shadow-sm">
-              Logo 3
-            </div>
+            <span className="glass-chip">Logo 1</span>
+            <span className="glass-chip">Logo 2</span>
+            <span className="glass-chip">Logo 3</span>
           </div>
         </div>
       </div>

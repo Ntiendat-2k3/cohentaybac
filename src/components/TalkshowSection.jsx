@@ -1,42 +1,58 @@
+// src/components/TalkshowSection.jsx
 import SectionTitle from "./layout/SectionTitle";
 
 const benefits = [
-  "Gặp gỡ, trò chuyện trực tiếp với gia đình anh Hà – chị Thông.",
-  "Nghe những câu chuyện đời, chuyện nghề và hành trình giữ gìn bản sắc.",
-  "Hiểu hơn về văn hoá, con người Tây Bắc từ góc nhìn của chính người trong cuộc.",
-  "Nhận quà tặng nhỏ xinh mang hương vị núi rừng dành riêng cho khách tham gia."
+  "Gặp gỡ gia đình anh Hà – chị Thông, những con người “bình thường mà phi thường” của Tây Bắc.",
+  "Nghe chuyện nhà, chuyện làm du lịch và cách họ giữ bản sắc giữa đời sống hiện đại.",
+  "Cảm nhận không gian gần gũi, nơi mỗi lời nói đều mang hương núi, vị sương.",
+  "Nhận quà nhỏ xinh và trải nghiệm đặc sản dành riêng cho khách tham gia."
 ];
 
 export default function TalkshowSection() {
   return (
-    <section className="mb-12">
+    <section className="section-shell" id="talkshow">
       <SectionTitle
         eyebrow="Talkshow"
         title='“Người Tây Bắc kể chuyện nhà”'
       />
-      <div className="grid gap-6 md:grid-cols-[1.5fr,1fr]">
-        <div className="rounded-3xl border border-white/40 bg-white/40 p-5 shadow-lg backdrop-blur-xl">
+
+      {/* items-start để card không bị kéo bằng nhau */}
+      <div className="section-grid-2 md:items-start">
+        {/* Bên trái: nội dung */}
+        <div className="glass-card">
           <p className="mb-4 text-sm text-slate-700">
-            Talkshow là dịp để bạn chậm lại giữa nhịp sống phố thị,
-            lắng nghe những câu chuyện chân thật, mộc mạc nhưng đầy cảm
-            hứng. Không phải những bài diễn thuyết hoa mỹ, mà là lời kể
-            của người đang ngày ngày sống cùng núi rừng.
+            Talkshow là khoảng lặng giữa nhịp sống phố thị để nghe những
+            câu chuyện rất đời của người vùng cao: ở lại hay rời đi,
+            làm du lịch hay làm nông, giữ hay bỏ những điều thuộc về
+            núi rừng.
           </p>
-          <ul className="space-y-2 text-sm text-slate-700">
+          <ul className="list-dot">
             {benefits.map((item) => (
-              <li key={item} className="flex gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-400" />
+              <li key={item}>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
         </div>
-        <div className="rounded-3xl border border-amber-200/60 bg-amber-50/70 p-5 text-sm font-medium text-amber-900 shadow-lg backdrop-blur-xl">
-          <p>
-            Đừng bỏ lỡ cơ hội “Có hẹn với Tây Bắc” ngay tại Hà Nội –
-            nơi mỗi câu chuyện được kể bằng tiếng nói của núi rừng, mỗi
-            nụ cười đều mang hương nắng, vị sương vùng cao.
-          </p>
+
+        {/* Bên phải: ảnh talkshow (cao vừa phải) */}
+        <div className="glass-card-tight flex items-center">
+          <div className="relative h-64 w-full overflow-hidden rounded-2xl md:h-72">
+            <img
+              src="/assets/talkshow.png"
+              alt="Không khí Talkshow Người Tây Bắc kể chuyện nhà"
+              className="h-full w-full object-cover"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
+            <div className="absolute bottom-3 left-3 right-3 text-xs text-white/90">
+              <p className="font-medium">
+                Khoảnh khắc ngồi nghe chuyện “nhà” ngay giữa lòng Hà Nội.
+              </p>
+              <p className="text-[11px] text-white/80">
+                Ấm cúng, gần gũi như đang ngồi bên hiên nhà vùng cao.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

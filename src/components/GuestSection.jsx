@@ -1,27 +1,26 @@
+// src/components/GuestSection.jsx
 import SectionTitle from "./layout/SectionTitle";
 
 export default function GuestSection() {
   return (
-    <section className="mb-12">
+    <section className="section-shell">
       <SectionTitle
         eyebrow="Khách mời"
         title="Gia đình anh Hà – chị Thông"
-        subtitle="Những người con “bình thường mà phi thường” của núi rừng Tây Bắc"
+        subtitle="Những người làm du lịch từ chính mái nhà vùng cao."
       />
-      <div className="grid gap-6 md:grid-cols-2">
-        <p className="rounded-3xl border border-white/40 bg-white/40 p-5 text-sm text-slate-700 shadow-lg backdrop-blur-xl">
-          Gia đình anh Hà – chị Thông là những người đã đóng góp rất
-          nhiều cho sự phát triển của mô hình du lịch PineHomestay tại
-          Bản Liền – Lào Cai. Từ một ngôi nhà nhỏ bên sườn núi, anh chị
-          đã cùng người dân nơi đây xây dựng nên điểm đến được nhiều du
-          khách yêu mến.
+      <div className="section-grid-2">
+        <p className="glass-card text-sm text-slate-700">
+          Từ một ngôi nhà nhỏ ở Bản Liền (Lào Cai), anh Hà – chị Thông
+          cùng bà con xây dựng nên PineHomestay được nhiều du khách
+          yêu mến. Họ làm du lịch theo cách rất mộc: chân thành, giản
+          dị và tôn trọng đất rừng.
         </p>
-        <p className="rounded-3xl border border-white/40 bg-white/40 p-5 text-sm text-slate-700 shadow-lg backdrop-blur-xl">
-          Tại lễ hội, anh chị sẽ mang đến những câu chuyện đời giản dị
-          nhưng đầy nghị lực về hành trình giữ gìn bản sắc dân tộc, tình
-          yêu đất, yêu nghề và niềm tự hào được sống cùng núi rừng.
-          Những câu chuyện “nhà” nhưng chạm đến trái tim của bất cứ ai
-          từng yêu Tây Bắc.
+        <p className="glass-card text-sm text-slate-700">
+          Đến với chương trình, gia đình sẽ kể những câu chuyện “nhà”:
+          vì sao chọn ở lại với núi, giữ nghề, giữ bản sắc và đón khách
+          gần xa. Ít lời hoa mỹ, nhưng nhiều cảm hứng sống chậm và sống
+          thật.
         </p>
       </div>
     </section>

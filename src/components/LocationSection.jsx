@@ -2,13 +2,13 @@ import SectionTitle from "./layout/SectionTitle";
 
 export default function LocationSection() {
   return (
-    <section className="mb-12">
+    <section className="section-shell">
       <SectionTitle
         eyebrow="Địa điểm"
         title="Làm sao để đến với “Có hẹn với Tây Bắc”?"
       />
-      <div className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-3xl border border-white/40 bg-white/40 p-5 text-sm text-slate-700 shadow-lg backdrop-blur-xl">
+      <div className="section-grid-2">
+        <div className="glass-card text-sm text-slate-700">
           <p className="mb-2">
             📍 <b>An Hội An Cà Phê</b> – C3107, Đường Lê Trọng Tấn, Hà
             Đông, Hà Nội
@@ -18,16 +18,13 @@ export default function LocationSection() {
             href="https://maps.app.goo.gl/cwQXsCFGDeGkXDLV9?g_st=ipc"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-full border border-rose-500/70 bg-white/50 px-4 py-2 text-xs font-semibold text-rose-700 backdrop-blur-md transition hover:bg-rose-50/90"
+            className="pill-outline"
           >
             Mở bản đồ trên Google Maps
           </a>
         </div>
-        <div className="flex items-stretch">
-          <div className="flex w-full items-center justify-center rounded-3xl border border-white/40 bg-white/30 p-5 text-xs text-slate-500 shadow-lg backdrop-blur-xl">
-            {/* bạn có thể thay block này bằng iframe map thực */}
-            Bản đồ Google Maps sẽ được nhúng tại đây.
-          </div>
+        <div className="flex items-stretch hidden lg:block">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.369442291282!2d105.7597073!3d20.977822900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134536006da824b%3A0x4308892004cfa46b!2zQW4gSOG7mWkgQW4gQ8OgIFBow6ogY8ahIHPhu58gRMawxqFuZyBO4buZaQ!5e0!3m2!1svi!2s!4v1763213744433!5m2!1svi!2s" className="glass-card w-full" style={{ border: 0, minHeight: '350px' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Bản đồ Google Maps đến An Hội An Cà Phê"></iframe>
         </div>
       </div>
     </section>

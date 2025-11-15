@@ -5,10 +5,9 @@ import WhyJoinSection from "../components/WhyJoinSection";
 import ScheduleSection from "../components/ScheduleSection";
 import GuestSection from "../components/GuestSection";
 import TalkshowSection from "../components/TalkshowSection";
-import SeatmapSection from "../components/SeatmapSection";
-import RegistrationSection from "../components/RegistrationSection";
 import LocationSection from "../components/LocationSection";
 import SponsorSection from "../components/SponsorSection";
+import BookingSection from "../components/BookingSection";
 
 export default function LandingPage() {
   return (
@@ -20,8 +19,7 @@ export default function LandingPage() {
         <ScheduleSection />
         <GuestSection />
         <TalkshowSection />
-        <SeatmapSection />
-        <RegistrationSection />
+        <BookingSection />
         <LocationSection />
         <SponsorSection />
       </Container>
