@@ -1,0 +1,31 @@
+import SectionTitle from "./layout/SectionTitle";
+
+const reasons = [
+  "Thưởng thức ẩm thực đặc sản vùng cao: cơm lam, thịt trâu gác bếp… chan chứa tình người bản địa.",
+  "Đắm mình trong âm nhạc và vũ điệu Tây Bắc – âm thanh núi rừng và tiếng hát mộc mạc.",
+  "Check-in tại khu “Chợ phiên thu nhỏ” rực rỡ sắc màu, mỗi góc là một bức tranh sống động.",
+  "Mua sắm đặc sản và quà tặng được làm bằng bàn tay & trái tim của người con Tây Bắc.",
+  "Nhận quà Tây Bắc hấp dẫn khi đăng ký trước hoặc tham gia minigame tại sự kiện."
+];
+
+export default function WhyJoinSection() {
+  return (
+    <section className="mb-12">
+      <SectionTitle
+        eyebrow="Vì sao nên tham gia?"
+        title="Một ngày trọn vẹn hương núi gió ngàn"
+      />
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {reasons.map((item) => (
+          <article
+            key={item}
+            className="rounded-3xl border border-white/40 bg-white/40 p-5 text-sm text-slate-700 shadow-lg backdrop-blur-xl"
+          >
+            <div className="mb-2 h-1 w-10 rounded-full bg-emerald-300/80" />
+            <p>{item}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}

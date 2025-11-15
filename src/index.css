@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* Thiết lập design token bằng @theme (thay cho tailwind.config.js) */
+@theme {
+  /* Font family */
+  --font-body: "Be Vietnam Pro", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+
+  --font-display: "Dancing Script", cursive;
+
+  /* Màu riêng cho Có Hẹn Với Tây Bắc */
+  --color-tbx-sky: #c9f2ff;
+  --color-tbx-green: #cde9c9;
+  --color-tbx-amber: #ffe6b5;
+  --color-tbx-rose: #f86b74;
+
+  /* Animation utilities (tạo class animate-fade-up, animate-float, ...) */
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.19, 1, 0.22, 1) both;
+  --animate-fade-up-slow: fade-up 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+  --animate-fade-in: fade-in 1s ease-out both;
+  --animate-float: float 8s ease-in-out infinite;
+
+  /* Keyframes cho các animation trên */
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(18px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+/* Base style: nền gradient + font mặc định */
+@layer base {
+  body {
+    @apply font-body text-slate-900;
+
+    background:
+      radial-gradient(circle at 0% 0%, #d8f1ff, transparent 55%),
+      radial-gradient(circle at 100% 0%, #ffe4c7, transparent 55%),
+      radial-gradient(circle at 50% 100%, #d9f9e4, transparent 55%),
+      #f5fafc;
+  }
+}
+
+/* Component class dùng lại cho các khối glassmorphism */
+@layer components {
+  .glass {
+    @apply rounded-3xl border border-white/40 bg-white/40 shadow-lg backdrop-blur-xl;
+  }
+}
