@@ -2,49 +2,39 @@ import { useState } from "react";
 import SectionTitle from "./layout/SectionTitle";
 
 const ZONES = [
-  {
-    id: "gia-dinh",
-    name: "Gia đình",
-    note: "Ghế nệm trung tâm, 6 ghế."
-  },
-  {
-    id: "ban-lang",
-    name: "Bản làng",
-    note: "Chiếu hoa, mỗi bên 12 ghế."
-  },
-  {
-    id: "nui-rung",
-    name: "Núi rừng",
-    note: "Chiếu hoa, mỗi bên 12 ghế."
-  },
-  {
-    id: "suoi-nguon",
-    name: "Suối nguồn",
-    note: "Ghế tre, mỗi bên 24 ghế."
-  },
-  {
-    id: "may-ngan",
-    name: "Mây ngàn",
-    note: "Ghế tre, mỗi bên 24 ghế."
-  }
+  { id: "gia-dinh", name: "Gia đình", note: "Ghế nệm trung tâm, 6 ghế." },
+  { id: "ban-lang", name: "Bản làng", note: "Chiếu hoa, mỗi bên 12 ghế." },
+  { id: "nui-rung", name: "Núi rừng", note: "Chiếu hoa, mỗi bên 12 ghế." },
+  { id: "suoi-nguon", name: "Suối nguồn", note: "Ghế tre, mỗi bên 24 ghế." },
+  { id: "may-ngan", name: "Mây ngàn", note: "Ghế tre, mỗi bên 24 ghế." }
 ];
 
-// thay YOUR_FORM_ID bằng id form thật
-const GOOGLE_FORM_EMBED_SRC =
-  "https://docs.google.com/forms/d/e/1FAIpQLSczQ5YEygDnzGunAG5BrpJyzntVKdJVvrxKhHg2v8j5dGREPQ/viewform?embedded=true";
+const GOOGLE_FORM_URL ="https://docs.google.com/forms/d/e/1FAIpQLSczQ5YEygDnzGunAG5BrpJyzntVKdJVvrxKhHg2v8j5dGREPQ/viewform?v=2"
 
 export default function BookingSection() {
   const [selectedZone, setSelectedZone] = useState(ZONES[0].id);
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   const selectedInfo = ZONES.find((z) => z.id === selectedZone);
 
   const handleOpenForm = () => {
-    setIsFormOpen(true);
-  };
+    if (typeof window === "undefined") return;
 
-  const handleCloseForm = () => {
-    setIsFormOpen(false);
+    // Mobile: mở tab mới full màn
+    if (window.innerWidth < 768) {
+      window.open(GOOGLE_FORM_URL, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    // Desktop: mở popup cỡ vừa (nhiều trình duyệt vẫn cho vì là click trực tiếp)
+    const w = 960;
+    const h = 720;
+    const left = window.screenX + (window.innerWidth - w) / 2;
+    const top = window.screenY + (window.innerHeight - h) / 2;
+
+    window.open(
+      GOOGLE_FORM_URL,
+      "coHenVoiTayBacForm",
+      `width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes,noopener`
+    );
   };
 
   return (
@@ -125,7 +115,7 @@ export default function BookingSection() {
             onClick={handleOpenForm}
             className="pill-primary w-full text-center"
           >
-            Mở form đăng ký
+            Mở form đăng ký (Google Form)
           </button>
 
           <p className="text-[11px] leading-relaxed text-slate-500">
@@ -134,37 +124,6 @@ export default function BookingSection() {
           </p>
         </div>
       </div>
-
-      {/* MODAL GOOGLE FORM */}
-      {isFormOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 px-4">
-          <div className="glass-card-tight relative max-h-[90vh] w-full max-w-3xl overflow-hidden">
-            {/* Header modal */}
-            <div className="mb-2 flex items-center justify-between gap-2">
-              <p className="text-xs font-semibold text-slate-800">
-                Biểu mẫu đăng ký “Có Hẹn Với Tây Bắc”
-              </p>
-              <button
-                type="button"
-                onClick={handleCloseForm}
-                className="pill-outline px-3 py-1 text-[11px]"
-              >
-                Đóng
-              </button>
-            </div>
-
-            {/* iFrame form */}
-            <div className="h-[70vh] w-full overflow-hidden rounded-2xl bg-white">
-              <iframe
-                src={GOOGLE_FORM_EMBED_SRC}
-                title="Google Form Đăng ký Có Hẹn Với Tây Bắc"
-                className="h-full w-full border-0"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

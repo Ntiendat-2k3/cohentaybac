@@ -2,10 +2,10 @@
 import SectionTitle from "./layout/SectionTitle";
 
 const benefits = [
-  "Gặp gỡ gia đình anh Hà – chị Thông, những con người “bình thường mà phi thường” của Tây Bắc.",
-  "Nghe chuyện nhà, chuyện làm du lịch và cách họ giữ bản sắc giữa đời sống hiện đại.",
-  "Cảm nhận không gian gần gũi, nơi mỗi lời nói đều mang hương núi, vị sương.",
-  "Nhận quà nhỏ xinh và trải nghiệm đặc sản dành riêng cho khách tham gia."
+  "Gặp gỡ Gia đình anh Hà chị Thông, những con người “bình thường mà phi thường” của núi rừng Tây Bắc",
+  "Nghe kể những câu chuyện đời, chuyện nghề, chuyện giữ hồn bản sắc giữa thời hiện đại.",
+  "Trải nghiệm không gian văn hóa gần gũi  nơi mỗi lời nói, mỗi nụ cười đều mang hương núi, vị sương.",
+  "Nhận quà tặng đặc biệt từ ban tổ chức dành riêng cho khách tham gia talkshow.."
 ];
 
 export default function TalkshowSection() {
@@ -21,10 +21,7 @@ export default function TalkshowSection() {
         {/* Bên trái: nội dung */}
         <div className="glass-card">
           <p className="mb-4 text-sm text-slate-700">
-            Talkshow là khoảng lặng giữa nhịp sống phố thị để nghe những
-            câu chuyện rất đời của người vùng cao: ở lại hay rời đi,
-            làm du lịch hay làm nông, giữ hay bỏ những điều thuộc về
-            núi rừng.
+            Đừng để mình lạc giữa phố thị mà bỏ lỡ cơ hội chạm vào hơi thở núi rừng Tây Bắc. Đăng ký tham gia chương trình Talkshow “Người Tây Bắc kể chuyện nhà” để lắng nghe và thấu cảm những câu chuyện chân thật, bình dị mà sâu lắng từ chính người con của vùng cao.
           </p>
           <ul className="list-dot">
             {benefits.map((item) => (

@@ -13,15 +13,10 @@ export default function IntroSection() {
       />
       <div className="section-grid-2">
         <p className="glass-card text-sm text-slate-700">
-          “Có hẹn với Tây Bắc” mang không khí bản làng, chợ phiên và
-          sắc màu thổ cẩm về giữa Hà Nội. Bạn có thể ăn món ngon vùng
-          cao, nghe nhạc dân tộc và chụp những bức ảnh rực rỡ màu váy
-          áo.
+          “Có hẹn với Tây Bắc” nơi bạn được “chạm” vào tinh hoa vùng cao ngay giữa lòng Hà Nội. Âm nhạc dân tộc, ẩm thực truyền thống và những bộ trang phục thổ cẩm rực rỡ, tất cả hòa quyện tạo nên không gian đậm đà bản sắc, đưa bạn vào hành trình khám phá đầy xúc cảm.
         </p>
         <p className="glass-card text-sm text-slate-700">
-          Không cần đi xa, bạn vẫn được chạm vào câu chuyện của người
-          Tây Bắc, hiểu hơn về cách họ sống, làm du lịch và giữ gìn
-          bản sắc. Một ngày nhẹ nhàng nhưng đầy trải nghiệm.
+          Người dân Thủ Đô được trải nghiệm phiên chợ Tây Bắc thu nhỏ, thưởng thức đặc sản vùng cao, giao lưu với những khách mời đặc biệt và lưu giữ những bức hình rực rỡ sắc màu. Sự kiện chính là không gian văn hóa đậm đà bản sắc núi rừng, nơi mỗi bước chân đều là một hành trình khám phá.
         </p>
       </div>
     </section>

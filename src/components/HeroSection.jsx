@@ -4,17 +4,37 @@ export default function HeroSection() {
   return (
     <section
       className="
-        relative flex min-h-[70vh] items-center overflow-hidden pb-16 pt-20
-        bg-fixed bg-[radial-gradient(circle_at_0%_0%,rgba(201,242,255,0.9),transparent_60%),radial-gradient(circle_at_100%_0%,rgba(255,230,181,0.9),transparent_55%),radial-gradient(circle_at_50%_100%,rgba(205,233,201,0.95),transparent_60%)]
+        relative flex min-h-[78vh] items-center overflow-hidden pb-16 pt-24
       "
     >
+      {/* LỚP ẢNH NỀN MỜ ĐẰNG SAU */}
+      <div
+        className="
+          pointer-events-none absolute inset-0 -z-20
+          bg-fixed bg-cover bg-center opacity-20
+          blur-[2px]
+        "
+        style={{
+          backgroundImage: "url('/assets/background.jpg')" // đổi path nếu khác
+        }}
+      />
+
+      {/* LỚP GRADIENT MỀM CHE LÊN ẢNH CHO DỄ ĐỌC CHỮ */}
+      <div
+        className="
+          pointer-events-none absolute inset-0 -z-10
+          bg-[radial-gradient(circle_at_0%_0%,rgba(201,242,255,0.9),transparent_60%),radial-gradient(circle_at_100%_0%,rgba(255,230,181,0.9),transparent_55%),radial-gradient(circle_at_50%_100%,rgba(205,233,201,0.95),transparent_60%)]
+          mix-blend-soft-light
+        "
+      />
+
       {/* blob màu tạo cảm giác parallax + chiều sâu */}
       <div className="pointer-events-none absolute -left-16 -top-28 h-64 w-64 rounded-full bg-tbx-sky/60 blur-3xl animate-float" />
       <div className="pointer-events-none absolute -right-20 top-0 h-72 w-72 rounded-[999px] bg-tbx-amber/80 blur-3xl animate-float [animation-delay:2s]" />
       <div className="pointer-events-none absolute bottom-[-5rem] left-1/2 h-72 w-72 -translate-x-1/2 rounded-[999px] bg-tbx-green/70 blur-3xl animate-float [animation-delay:4s]" />
 
       <Container>
-        <div className="relative mx-auto max-w-3xl glass-surface p-8 md:p-10 animate-fade-up-slow">
+        <div className="relative mx-auto max-w-3xl glass-card p-8 md:p-10 animate-fade-up-slow">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-800">
             Sự kiện văn hoá Tây Bắc
           </p>
