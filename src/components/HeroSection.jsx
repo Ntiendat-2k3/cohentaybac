@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div
         className="
           pointer-events-none absolute inset-0 -z-20
-          bg-fixed bg-cover bg-center opacity-20
+          bg-fixed bg-cover bg-center opacity-40
           blur-[2px]
         "
         style={{
